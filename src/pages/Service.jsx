@@ -27,7 +27,7 @@ const Service = () => {
 
     return (
         <>
-            <div>
+            <div className='relative'>
                 <div className='bg-[#F1F8FF] diagonal-left w-[55%] h-[490px]'>
                     <div className='px-32 py-20 z-10'>
                         <div className='flex items-center justify-center gap-3 py-2 border rounded-md w-36 mb-5'>
@@ -46,7 +46,7 @@ const Service = () => {
                         <button className='bg-[#3267FF] px-7 py-3 text-white rounded-md '>Contact Us</button>
                     </div>
                 </div>
-                <img src={image1} alt="" className='absolute top-40  right-0 -z-10 w-[80%] h-[489px] ' />
+                <img src={image1} alt="" className='absolute top-0  right-0 -z-10 w-[80%] h-[489px] ' />
             </div>
 
 

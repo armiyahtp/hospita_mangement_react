@@ -5,8 +5,8 @@ const Contacts = () => {
   return (
     <div className='px-6 md:px-16 lg:px-24 xl:px-32 py-10 md:py-20'>
       <div className='bg-[#F1F8FF] rounded-md mt-20 md:mt-40'>
-        <div className='relative flex flex-col md:flex-row'>
-          <div className='w-full md:w-[60%] px-6 md:px-10 py-10 md:py-14'>
+        <div className='relative flex flex-col items-center lg:flex-row'>
+          <div className='w-full md:w-[60%] px-6 md:px-0 py-10 md:py-14'>
             <div className='flex items-center justify-start gap-3 px-3 py-2 border rounded-md w-fit mb-4'>
               <p className='text-sm text-[#3267FF]'>Contact Us</p>
             </div>
@@ -15,7 +15,7 @@ const Contacts = () => {
                 Become The Next
                 <br />Our
               </h1>
-              <p className='text-[#636571] text-sm md:text-base w-[60%]'>
+              <p className='text-[#636571] text-sm md:text-base lg:w-[60%] w-full'>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Aenean commodo ligula eget dolor. Aenean massa.
               </p>
@@ -28,7 +28,7 @@ const Contacts = () => {
           <img
             src={image1}
             alt=""
-            className='mx-auto md:absolute md:bottom-0 md:right-0'
+            className='mx-auto lg:absolute lg:bottom-0 lg:right-0'
           />
         </div>
       </div>
