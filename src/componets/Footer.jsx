@@ -12,23 +12,22 @@ const Footer = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className='bg-[#000A2D] px-6 md:px-16 lg:px-32 py-10'>
-            {/* Top Row: Logo + Toggle Button for Mobile */}
-            <div className='flex justify-between items-center lg:hidden mb-8'>
+        <div className='bg-[#000A2D] px-6 md:px-16 lg:px-32 py-5 lg:py-10'>
+            
+            <div className='flex justify-between items-center lg:hidden lg:mb-8'>
                 <div className='w-[55%]'>
                     <img src={logo} alt="Logo" className='w-full' />
                 </div>
-                <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="text-white bg-[#3267FF] px-4 py-2 rounded-md"
-                >
-                    {menuOpen ? 'Close' : 'Menu'}
+                <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+                    </svg>
                 </button>
             </div>
 
-            <div className={`flex flex-col lg:flex-row flex-wrap items-start justify-between gap-y-10 ${menuOpen ? 'block' : 'hidden'} lg:flex`}>
+            <div className={`flex flex-col lg:flex-row flex-wrap items-start justify-between mt-6 lg:mt-0 gap-y-10 ${menuOpen ? 'block' : 'hidden'} lg:flex`}>
 
-                {/* Column 1: Logo + Social Icons */}
+                
                 <div className='w-full lg:w-[25%] space-y-6 lg:block hidden'>
                     <div className='w-[55%] space-y-6'>
                         <img src={logo} alt="" className='w-full' />
@@ -44,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Column 2: Links */}
+                
                 <div className='w-full sm:w-[48%] lg:w-[25%]'>
                     <div className='mb-3'>
                         <h3 className='text-white text-lg font-semibold'>Helpfull Links</h3>
@@ -58,7 +57,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 3: Duplicate Help Links (as in your original code) */}
+                
                 <div className='w-full sm:w-[48%] lg:w-[25%]'>
                     <div className='mb-3'>
                         <h3 className='text-white text-lg font-semibold'>Helpfull Links</h3>
@@ -72,7 +71,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Column 4: Contact Info */}
+                
                 <div className='w-full lg:w-[25%]'>
                     <div className='mb-3'>
                         <h3 className='text-white text-lg font-semibold'>Contact Us</h3>

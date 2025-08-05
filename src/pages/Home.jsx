@@ -31,19 +31,19 @@ const Home = () => {
                         <h1 className='text-3xl md:text-3xl lg:text-5xl font-bold mb-5 lg:mb-7'>
                             Helping You to <br />Bring Back Your <br />Happy Smile
                         </h1>
-                        <p className='text-[#636571] text-sm lg:text-base'>
+                        <p className='text-[#636571] text-sm lg:text-base w-full lg:w-[60%]'>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                             Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                             natoque penatibus et magnis dis parturient.
                         </p>
-                        <img src={line} alt="" className='w-6 absolute md:right-[27%] md:top-[32%] lg:right-[52%] lg:top-[40%] -z-10 hidden md:block' />
+                        <img src={line} alt="" className='w-6 absolute md:right-[27%] md:top-[32%] lg:right-[56%] lg:top-[44%] -z-10 hidden md:block' />
                     </div>
                 </div>
 
 
                 <div className='relative bg-[#F1F8FF] w-full md:w-[40%] md:h-[245px] lg:h-auto lg:w-1/2 mt-10 md:mt-0 flex justify-center md:justify-end'>
                     <img src={home} alt="" className='w-[80%] md:w-[65%]' />
-                    <div className='absolute left-auto top-[120px] pl-5 pr-8 pt-4 pb-2 bg-[#ffffff83] rounded-lg shadow hidden lg:block'>
+                    <div className='absolute left-[232px] top-[119px] pl-5 pr-8 pt-4 pb-2 bg-[#ffffff83] rounded-lg shadow hidden lg:block'>
                         <div className='flex items-center justify-between mb-3'>
                             <div className='flex'>
                                 <img src={user1} alt="" className='w-9' />

@@ -53,7 +53,7 @@ const Header = () => {
             </div>
 
             
-            <div className='px-4 md:px-32 py-4 flex flex-wrap items-center justify-between'>
+            <div className='px-4 md:px-16 lg:px-32 py-4 flex flex-wrap items-center justify-between'>
                 
                 <div className='w-[40%] lg:w-[16%]'>
                     <img src={logo} alt="" className='w-full max-w-[150px]' />
