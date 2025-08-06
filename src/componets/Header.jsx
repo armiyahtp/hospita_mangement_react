@@ -100,7 +100,7 @@ const Header = () => {
                             </div>
 
                             {open && (
-                                <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md px-4 py-4 space-y-2 z-10 w-40">
+                                <ul className="absolute top-full left-0 bg-white shadow-lg rounded-md px-4 py-4 space-y-2 z-30 w-40">
                                     <li>
                                         <Link to="/blog" className="block text-gray-700 hover:text-blue-600">
                                             Blog
