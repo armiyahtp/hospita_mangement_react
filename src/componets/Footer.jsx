@@ -77,7 +77,7 @@ const Footer = () => {
                         <h3 className='text-white text-lg font-semibold'>Contact Us</h3>
                     </div>
                     <div className='border-b-2 border-[#3267FF] mb-4 w-16'></div>
-                    <div className='w-full bg-white py-1 rounded-md flex items-center justify-between mb-3'>
+                    <div className='w-full md:w-[50%] lg:w-full bg-white py-1 rounded-md flex items-center justify-between mb-3'>
                         <input type="email" placeholder='Your Email Address' className='outline-none ml-3 w-full text-sm' />
                         <button className='bg-[#3267FF] w-32 px-3 py-2 rounded-md text-sm text-white font-medium mr-1'>Sign Up</button>
                     </div>
