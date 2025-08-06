@@ -16,31 +16,27 @@ export default function Singup() {
         formState: { errors },
     } = useForm()
 
-
     const onSubmit = (data) => console.log(data)
 
-
     return (
-        <div className="bg-[#191414ca] w-full h-screen">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-                <div className="flex justify-center rounded-xl shadow-xl">
+        <div className="bg-[#191414ca] w-full min-h-screen">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-[70%] sm:w-[90%] lg:w-auto">
+                <div className="flex flex-col md:flex-row justify-center rounded-xl shadow-xl">
 
-                    <div className="w-[40%] bg-[#3267FF] rounded-s-xl flex items-end">
-                        <img src={image1} alt="" />
+                    <div className="w-full md:w-[40%] bg-[#3267FF] rounded-t-xl md:rounded-tr-none md:rounded-s-xl flex items-end justify-center">
+                        <img src={image1} alt="" className="w-[30%] md:w-auto" />
                     </div>
 
-
-                    <form onSubmit={handleSubmit(onSubmit)} className="w-[60%] px-8 py-7 rounded-e-xl bg-white">
+                    <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-[60%] px-6 md:px-8 py-4 bg-white rounded-b-xl md:rounded-bl-none md:rounded-e-xl relative">
 
                         <div onClick={hideRegister} className="absolute right-3 top-3 cursor-pointer">
                             <X size={20} className="text-gray-500" />
                         </div>
 
-                        <h1 className="text-3xl font-bold text-[#3267FF] text-center mb-16">Sing Up</h1>
+                        <h1 className="text-3xl font-bold text-[#3267FF] text-center mb-5 md:mb-16">Sing Up</h1>
 
-
-                        <div className="flex gap-7">
-                            <div>
+                        <div className="flex flex-col md:flex-row gap-4 md:gap-7">
+                            <div className="w-full">
                                 <input
                                     type="text"
                                     name="first_name"
@@ -51,13 +47,12 @@ export default function Singup() {
                                         required: "First name is required"
                                     })}
                                 />
-
                                 {errors.first_name && (
                                     <span className="text-red-400">{errors.first_name.message}</span>
                                 )}
                             </div>
 
-                            <div>
+                            <div className="w-full">
                                 <input
                                     type="text"
                                     name="last_name"
@@ -68,18 +63,13 @@ export default function Singup() {
                                         required: "Last name is required"
                                     })}
                                 />
-
                                 {errors.last_name && (
                                     <span className="text-red-400">{errors.last_name.message}</span>
                                 )}
                             </div>
                         </div>
 
-
-
-
-
-                        <div className="mb-7 mt-7">
+                        <div className="mb-5 mt-5">
                             <input
                                 type="email"
                                 name="email"
@@ -94,7 +84,6 @@ export default function Singup() {
                                     }
                                 })}
                             />
-
                             {errors.email && (
                                 <span className="text-red-400">{errors.email.message}</span>
                             )}
@@ -115,7 +104,6 @@ export default function Singup() {
                                     }
                                 })}
                             />
-
                             {errors.password && (
                                 <span className="text-red-400">{errors.password.message}</span>
                             )}
@@ -126,13 +114,12 @@ export default function Singup() {
                                 type="submit"
                                 className="px-8 py-2 rounded-md bg-[#3267FF] text-white cursor-pointer"
                             />
-                            <p className="mt-6 mb-5">Already have an account? <span onClick={showLogin} className="text-[#3267FF] cursor-pointer">login</span></p>
+                            <p className="mt-4 mb-3">Already have an account? <span onClick={showLogin} className="text-[#3267FF] cursor-pointer">login</span></p>
                         </div>
 
                     </form>
                 </div>
             </div>
         </div>
-
     )
 }

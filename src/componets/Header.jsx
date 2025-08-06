@@ -12,6 +12,7 @@ const Header = () => {
     const { showRegister, showLogin } = useSign()
 
     const [togle, setTogle] = useState("togle-box")
+    const [lgtogle, setLgTogle] = useState("lg-togle-box")
     const [btnOne, setBtnOne] = useState("btn")
     const [btnTwo, setBtnTwo] = useState("btn active")
 
@@ -27,12 +28,24 @@ const Header = () => {
         setBtnTwo("btn active")
     }
 
+    const addLgTogle = () => {
+        setLgTogle("lg-togle-box active")
+        setBtnOne("btn active")
+        setBtnTwo("btn")
+    }
+
+    const removeLgTogle = () => {
+        setLgTogle("lg-togle-box")
+        setBtnOne("btn")
+        setBtnTwo("btn active")
+    }
+
     const [open, setOpen] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
 
     return (
         <div className=''>
-            
+
             <div className='px-4 md:px-[8%] py-3 md:py-5 flex flex-wrap justify-between items-center border-b border-[#7f8084] text-sm'>
                 <div className='flex flex-col md:flex-row gap-2 md:gap-4'>
                     <div className='flex items-center gap-2'>
@@ -52,14 +65,14 @@ const Header = () => {
                 </div>
             </div>
 
-            
+
             <div className='px-4 md:px-16 lg:px-32 py-4 flex flex-wrap items-center justify-between'>
-                
+
                 <div className='w-[40%] lg:w-[16%]'>
                     <img src={logo} alt="" className='w-full max-w-[150px]' />
                 </div>
 
-                
+
                 <div className="lg:hidden">
                     <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +81,7 @@ const Header = () => {
                     </button>
                 </div>
 
-                
+
                 <div className={`w-full lg:w-auto mt-4 lg:mt-0 ${menuOpen ? "block" : "hidden"} lg:block`}>
                     <ul className='flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-16'>
                         <li><Link to="/" className='font-semibold'>Home</Link></li>
@@ -103,13 +116,18 @@ const Header = () => {
                         </li>
                         <li><Link to="/contact" className='font-semibold'>Contact Us</Link></li>
                     </ul>
+                    <div className='relative lg:hidden flex bg-[#f1f8ff] z-20 shadow-inner rounded-md p-1 w-[63%] md:w-[34%] mt-6'>
+                        <div className={`${togle} shadow z-0`}></div>
+                        <button onClick={showLogin} onMouseEnter={removeTogle} className={`btn1 px-7 py-[9px] z-10 ${btnTwo} rounded-md`}>Sign In</button>
+                        <button onClick={showRegister} onMouseEnter={addTogle} className={`px-6 py-[9px] z-10 ${btnOne} rounded-md`}>Sign Up</button>
+                    </div>
                 </div>
 
-                
+
                 <div className='hidden lg:flex bg-[#f1f8ff] z-10 shadow-inner rounded-md p-1 ml-4'>
-                    <div className={`${togle} shadow -z-10`}></div>
-                    <button onClick={showLogin} onMouseEnter={removeTogle} className={`btn1 px-6 py-[9px] ${btnTwo} rounded-md`}>Sign In</button>
-                    <button onClick={showRegister} onMouseEnter={addTogle} className={`px-6 py-[9px] ${btnOne} rounded-md`}>Sign Up</button>
+                    <div className={`${lgtogle} shadow -z-10`}></div>
+                    <button onClick={showLogin} onMouseEnter={removeLgTogle} className={`btn1 px-6 py-[9px] ${btnTwo} rounded-md`}>Sign In</button>
+                    <button onClick={showRegister} onMouseEnter={addLgTogle} className={`px-6 py-[9px] ${btnOne} rounded-md`}>Sign Up</button>
                 </div>
             </div>
         </div>
