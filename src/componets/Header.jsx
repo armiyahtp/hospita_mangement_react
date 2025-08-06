@@ -121,6 +121,7 @@ const Header = () => {
                         <button onClick={showLogin} onMouseEnter={removeTogle} className={`btn1 px-7 py-[9px] z-10 ${btnTwo} rounded-md`}>Sign In</button>
                         <button onClick={showRegister} onMouseEnter={addTogle} className={`px-6 py-[9px] z-10 ${btnOne} rounded-md`}>Sign Up</button>
                     </div>
+                    
                 </div>
 
 
